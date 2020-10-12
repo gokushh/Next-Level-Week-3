@@ -1,0 +1,63 @@
+#page-landing {
+  /*Como ele vai rotacionar o gradient, cor inicial, cor final. no-repeat*/
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) no-repeat; /*Nao repete a imagem de fundo, ela sera mostrada apenas uma vez*/
+  text-align: center;
+  min-height: 100vh; /*Altura minima. Impede que height se torne menor do que o valor especificado.*/
+
+  display: flex; /**/
+  align-items: center; /*Alinha apenas verticalmente*/
+}
+
+#container {
+  margin: auto; /*Alinha todo o conteudo ao centro da pagina. Ajuda na parte de mobile*/
+  width: 90%; /*Faz com que 90% da linha inteira seja utilizada pelo container, criando assim um espaco lateral entre o conteudo e a borda*/
+}
+
+/*.visit p - procure um elemento com a classe visit e procure dentro dele todos que forem p*/
+.location,
+h1,
+.visit p {
+  height: 16vh; /*Aplica 16 da altura da nossa viewport*/
+}
+
+.visit a {
+  width: 8rem;
+  height: 8rem;
+  background: #ffb666;
+
+  border: none;
+  border-radius: 3rem;
+
+  display: flex;
+  align-items: center; /*Alinhamento vertical*/
+  justify-content: center; /*Alinhamento horizontal*/
+
+  margin: auto;
+
+  transition: background 200ms; /*200ms = .2s*/
+}
+
+.visit a:hover {
+    background: #96feff;
+}
+
+/*Colocando um tempo diferente para a aparicao de cada elemento*/
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+main h1 {
+  animation-delay: 150ms;
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+.visit a {
+  animation-delay: 250ms;
+}

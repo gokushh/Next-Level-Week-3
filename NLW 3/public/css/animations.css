@@ -1,0 +1,20 @@
+/*Animações*/
+@keyframes up {
+  /*Onde vai começar a animação*/
+  from {
+    opacity: 0;
+    transform: translateY(16px); /*Transiciona no eixo Y, de baixo para cima*/
+  }
+
+  /*Onde vai terminar*/
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-up {
+  animation-name: up;
+  animation-duration: 500ms;
+  animation-fill-mode: backwards; /*Deixa o elemento div obter os valores de estilo definidos pelo primeiro quadro-chave(from) antes do inicio da animação */
+}

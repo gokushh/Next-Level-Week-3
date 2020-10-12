@@ -1,0 +1,57 @@
+/* 
+# - seletor de id. Tem mais especificidade. Não tanto quanto usar css no seletor html
+    #body {
+        color: red;
+    }
+
+!important - Tem mais especificidade ainda do que #. E ainda mais do que css aplicado diretamente no html
+    body {
+        color: green !important;
+    } 
+
+Design responsivo
+    rem/em: Primariamente aplicadas a fontes, mas podem ser utilizadas em outros lugares. Pixel e algo mais fixo.
+    
+    0.6em: busca o elemento pai e faz um calculo para ser equivalente.
+    1em = 16px
+
+    1.8rem: busca o elemento direto do doc html. (root element)
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*Para ocupar toda a pagina. Altura = 100 viewport height.*/
+  height: 100vh;
+  color: white;
+}
+
+/*
+Tamanho de fonte padronizado para todo o documento.
+Mudando aqui, mudamos o resto do documento. Interessante para mobile.
+*/
+:root {
+  font-size: 62.5%;
+}
+
+body,
+input,
+button,
+textarea {
+  font-weight: 400; /*Deixa a letra mais "gordinha"*/
+  line-height: 1; /*Altura ou distancia em que as linhas tem uma das outras*/
+  font-size: 1.8rem;
+  font-family: "Nunito", sans-serif; /*Se ele nao achar a primeira fonte, ele coloca por padrao a segunda*/
+
+  /*
+    Shorthands:
+        font: 400 1.8rem/1 'Nunito', sans-serif;
+
+    Pode ser feito tambem em %:
+        font-size: 62.5%;       (100% = 16px), (62.5% = 10px)
+    Faz o calculo dessa fonte baseado no tamanho da fonte que esta em :root
+    */
+}
